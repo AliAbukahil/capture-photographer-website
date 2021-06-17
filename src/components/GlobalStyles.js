@@ -20,6 +20,8 @@ html {
 body {
     box-sizing: border-box;
     background: #1b1b1b;
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Lobster', cursive; */
 }
 
 button {
@@ -31,6 +33,7 @@ button {
     background-color:transparent;
     color: white;
     transition: all 0.5s ease;
+    font-family: 'Inter', sans-serif;
     &:hover{
         background-color: #23d997;
         color: white;

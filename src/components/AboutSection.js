@@ -4,6 +4,7 @@ import home1 from "../img/home1.png";
 
 // Importing style components
 import styled from 'styled-components';
+import { StyledAbout, StyledDescription, StyledImage, StyledHide } from "../styles"
 
 function AboutSection() {
     return (
@@ -29,39 +30,5 @@ function AboutSection() {
         </StyledAbout>
     )
 }
-
-// Syntax of the Styled Components 
-// Please note that you can use sass syntax here too!
-const StyledAbout = styled.div `
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5rem 10rem;
-    color: white;
-`;
-
-const StyledDescription = styled.div `
-    flex: 1;
-    padding-right:5rem;
-    h2{
-        font-weight: lighter;
-    }
-`;
-
-const StyledImage = styled.div `
-    flex: 1;
-    overflow: hidden; // for the animation of the div img
-    img{
-        width: 85%;
-        height: 70vh;
-        object-fit: cover;
-        border-radius: 3rem 0.9rem 3rem 0.9rem;
-    } 
-`;
-
-const StyledHide = styled.div `
-    overflow: hidden;
-`;
 
 export default AboutSection;
