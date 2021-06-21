@@ -14,13 +14,19 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link to="/">1. About Us</Link>
+          <Link className="Links" to="/">
+            1. About Me
+          </Link>
         </li>
         <li>
-          <Link to="/work">2. Our Work</Link>
+          <Link className="Links" to="/work">
+            2. My Work
+          </Link>
         </li>
         <li>
-          <Link to="/contact">3. Contact US</Link>
+          <Link className="Links" to="/contact">
+            3. Contact Me
+          </Link>
         </li>
       </ul>
     </StyledNav>
@@ -51,6 +57,11 @@ const StyledNav = styled.nav`
   li {
     padding-left: 10rem;
     position: relative;
+
+    .Links {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
   }
 `;
 
