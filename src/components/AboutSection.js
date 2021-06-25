@@ -6,6 +6,9 @@ import home1 from "../img/home1.png";
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
 
+// import the wave SVG
+import Wave from "./Wave";
+
 import {
   StyledAbout,
   StyledDescription,
@@ -43,6 +46,7 @@ function AboutSection() {
           alt="man with a a camera"
         />
       </StyledImage>
+      <Wave />
     </StyledAbout>
   );
 }
