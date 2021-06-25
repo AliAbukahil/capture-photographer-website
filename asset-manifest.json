@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/capture-photographer-website/static/js/main.df41cb42.chunk.js",
-    "main.js.map": "/capture-photographer-website/static/js/main.df41cb42.chunk.js.map",
+    "main.js": "/capture-photographer-website/static/js/main.efc0ee44.chunk.js",
+    "main.js.map": "/capture-photographer-website/static/js/main.efc0ee44.chunk.js.map",
     "runtime-main.js": "/capture-photographer-website/static/js/runtime-main.2abc8a1e.js",
     "runtime-main.js.map": "/capture-photographer-website/static/js/runtime-main.2abc8a1e.js.map",
     "static/js/2.7bd5e638.chunk.js": "/capture-photographer-website/static/js/2.7bd5e638.chunk.js",
@@ -26,6 +26,6 @@
   "entrypoints": [
     "static/js/runtime-main.2abc8a1e.js",
     "static/js/2.7bd5e638.chunk.js",
-    "static/js/main.df41cb42.chunk.js"
+    "static/js/main.efc0ee44.chunk.js"
   ]
 }
