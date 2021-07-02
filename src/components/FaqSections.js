@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { StyledAbout } from "../styles";
 
 import Toggle from "./Toggle";
+// Importing Framer Motion
+import { AnimateSharedLayout } from "framer-motion";
 
 const FaqSections = () => {
   return (
@@ -12,8 +14,8 @@ const FaqSections = () => {
       <h2>
         Any Questions <span>FAQ</span>{" "}
       </h2>
-      <Toggle title="How Do I Start?">
-        <div className="question">
+      <AnimateSharedLayout>
+        <Toggle title="How Do I Start?">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
@@ -22,38 +24,32 @@ const FaqSections = () => {
               ullam! Quos, id.
             </p>
           </div>
-        </div>
-      </Toggle>
-      <Toggle title="Daily Schedule">
-        <div className="question">
+        </Toggle>
+        <Toggle title="Daily Schedule">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, ab?
             </p>
           </div>
-        </div>
-      </Toggle>
-      <Toggle title="Different Payment Methods">
-        <div className="question">
+        </Toggle>
+        <Toggle title="Different Payment Methods">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, ab?
             </p>
           </div>
-        </div>
-      </Toggle>
-      <Toggle title="What Products do you offer. ">
-        <div className="question">
+        </Toggle>
+        <Toggle title="What Products do you offer. ">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, ab?
             </p>
           </div>
-        </div>
-      </Toggle>
+        </Toggle>
+      </AnimateSharedLayout>
     </StyledFaq>
   );
 };
