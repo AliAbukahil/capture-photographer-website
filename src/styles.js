@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 // Syntax of the Styled Components
 // Please note that you can use sass syntax here too!
-export const StyledAbout = styled.div`
+export const StyledAbout = styled(motion.div)`
   min-height: 90vh;
   display: flex;
   align-items: center;
