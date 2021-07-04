@@ -15,6 +15,10 @@ html {
     // This defines what 1 rem is
     /*with this now 10px = 1rem */
     /* note that we could have used ems instead of rems but that is a whole lot of work, because it is difficult to make, because the ems depend not on the root font size but on the font size of the parent Element and with that you have to do a lot of calculations and it becomes really difficult to mange.  */
+    @media (max-width: 1700px){
+        font-size: 75%;
+    }
+
 }
 
 body {
