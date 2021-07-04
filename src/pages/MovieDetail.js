@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // Importing Styled Components:
 import styled from "styled-components";
 // Import Link from Router DOM
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 // Import Movie State
 import { MovieState } from "../movieState";
 // Importing Animations
@@ -12,7 +12,7 @@ import { pageAnimation } from "../animation";
 const MovieDetails = () => {
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies, setMovies] = useState(MovieState);
+  const [movies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
 
   //use Effect
@@ -20,7 +20,7 @@ const MovieDetails = () => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
     setMovie(currentMovie[0]);
     console.log(movie);
-  }, [movie, url]);
+  });
 
   return (
     <>

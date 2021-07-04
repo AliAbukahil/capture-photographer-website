@@ -16,7 +16,6 @@ import {
   lineAnim,
   slider,
   sliderContainer,
-  swoopAdoop,
 } from "../animation";
 // importing a self created Hook
 import { useScroll } from "../components/useScroll.js";
