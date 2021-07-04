@@ -27,11 +27,11 @@ function App() {
           <Route path="/work" exact>
             <OurWork />
           </Route>
+          <Route path="/contact" exact>
+            <ContactUs />
+          </Route>
           <Route>
             <MovieDetail path="/work/:id" />
-          </Route>
-          <Route path="/contact">
-            <ContactUs />
           </Route>
         </Switch>
       </AnimatePresence>

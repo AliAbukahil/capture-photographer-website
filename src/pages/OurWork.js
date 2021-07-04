@@ -19,7 +19,8 @@ import {
 } from "../animation";
 // importing a self created Hook
 import { useScroll } from "../components/useScroll.js";
-
+// Importing ScrollTop
+import ScrollTop from "../components/ScrollTop";
 function OurWork() {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
@@ -72,6 +73,7 @@ function OurWork() {
           <img src={goodTimes} alt="goodTimes" />
         </Link>
       </StyledMovie>
+      <ScrollTop />
     </StyledWork>
   );
 }
