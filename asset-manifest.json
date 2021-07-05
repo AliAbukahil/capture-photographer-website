@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/capture-photographer-website/static/js/main.48a1f2c9.chunk.js",
-    "main.js.map": "/capture-photographer-website/static/js/main.48a1f2c9.chunk.js.map",
+    "main.js": "/capture-photographer-website/static/js/main.4b3c0a1c.chunk.js",
+    "main.js.map": "/capture-photographer-website/static/js/main.4b3c0a1c.chunk.js.map",
     "runtime-main.js": "/capture-photographer-website/static/js/runtime-main.8964658f.js",
     "runtime-main.js.map": "/capture-photographer-website/static/js/runtime-main.8964658f.js.map",
-    "static/js/2.589ccb1d.chunk.js": "/capture-photographer-website/static/js/2.589ccb1d.chunk.js",
-    "static/js/2.589ccb1d.chunk.js.map": "/capture-photographer-website/static/js/2.589ccb1d.chunk.js.map",
+    "static/js/2.9dc1366d.chunk.js": "/capture-photographer-website/static/js/2.9dc1366d.chunk.js",
+    "static/js/2.9dc1366d.chunk.js.map": "/capture-photographer-website/static/js/2.9dc1366d.chunk.js.map",
     "static/js/3.24d73147.chunk.js": "/capture-photographer-website/static/js/3.24d73147.chunk.js",
     "static/js/3.24d73147.chunk.js.map": "/capture-photographer-website/static/js/3.24d73147.chunk.js.map",
     "index.html": "/capture-photographer-website/index.html",
-    "static/js/2.589ccb1d.chunk.js.LICENSE.txt": "/capture-photographer-website/static/js/2.589ccb1d.chunk.js.LICENSE.txt",
+    "static/js/2.9dc1366d.chunk.js.LICENSE.txt": "/capture-photographer-website/static/js/2.9dc1366d.chunk.js.LICENSE.txt",
     "static/media/athlete-small.9c7a85d4.png": "/capture-photographer-website/static/media/athlete-small.9c7a85d4.png",
     "static/media/athlete2.b216a5ad.png": "/capture-photographer-website/static/media/athlete2.b216a5ad.png",
     "static/media/clock.4b7cde7e.svg": "/capture-photographer-website/static/media/clock.4b7cde7e.svg",
@@ -25,7 +25,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8964658f.js",
-    "static/js/2.589ccb1d.chunk.js",
-    "static/js/main.48a1f2c9.chunk.js"
+    "static/js/2.9dc1366d.chunk.js",
+    "static/js/main.4b3c0a1c.chunk.js"
   ]
 }
