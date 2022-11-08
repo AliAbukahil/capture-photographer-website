@@ -1,41 +1,39 @@
-import React, { useState, useEffect } from "react";
-// Importing Styled Components:
-import styled from "styled-components";
-// Import Link from Router DOM
-import { useHistory } from "react-router-dom";
-// Import Movie State
-import { MovieState } from "../movieState";
-// Importing Animations
-import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import React, { useState, useEffect } from 'react';
 
-const MovieDetails = () => {
+import styled from 'styled-components';
+
+import { useHistory } from 'react-router-dom';
+import MovieState from '../movieState';
+
+// Animation // Framer motion
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
+
+const MovieDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
   const [movies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
 
-  //use Effect
   useEffect(() => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
     setMovie(currentMovie[0]);
-    console.log(movie);
-  });
+  }, [movies, url]);
 
   return (
     <>
       {movie && (
-        <StyledDetails
+        <Details
           exit="exit"
           variants={pageAnimation}
           initial="hidden"
           animate="show"
         >
-          <StyledHeadline>
+          <Headline>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />
-          </StyledHeadline>
-          <StyledAwards>
+          </Headline>
+          <Awards>
             {movie.awards.map((award) => (
               <Award
                 title={award.title}
@@ -43,21 +41,20 @@ const MovieDetails = () => {
                 key={award.title}
               />
             ))}
-          </StyledAwards>
+          </Awards>
           <ImageDisplay>
             <img src={movie.secondaryImg} alt="movie" />
           </ImageDisplay>
-        </StyledDetails>
+        </Details>
       )}
     </>
   );
 };
 
-const StyledDetails = styled(motion.div)`
+const Details = styled(motion.div)`
   color: white;
 `;
-
-const StyledHeadline = styled.div`
+const Headline = styled.div`
   min-height: 90vh;
   padding-top: 20vh;
   position: relative;
@@ -65,16 +62,26 @@ const StyledHeadline = styled.div`
     position: absolute;
     top: 10%;
     left: 50%;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%);
   }
   img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
   }
+
+  @media (max-width: 1500px) {
+    display: block;
+    margin: 2rem 2rem;
+    h2 {
+      font-size: 2.5rem;
+      top: 5%;
+      text-align: center;
+    }
+  }
 `;
 
-const StyledAwards = styled.div`
+const Awards = styled.div`
   min-height: 80vh;
   display: flex;
   margin: 5rem 10rem;
@@ -92,7 +99,7 @@ const AwardStyle = styled.div`
     font-size: 2rem;
   }
   .line {
-    width: 100%;
+    width: 50%;
     background: #23d997;
     height: 0.5rem;
     margin: 1rem 0rem;
@@ -101,7 +108,6 @@ const AwardStyle = styled.div`
     padding: 2rem 0rem;
   }
 `;
-
 const ImageDisplay = styled.div`
   min-height: 50vh;
   img {
@@ -109,10 +115,22 @@ const ImageDisplay = styled.div`
     height: 100vh;
     object-fit: cover;
   }
+
+  @media (max-width: 1500px) {
+    min-height: 50%;
+
+    img {
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+      margin-bottom: 2.5rem;
+    }
+  }
 `;
 
-//Award Component
-const Award = ({ title, description }) => {
+// Award Component
+
+function Award({ title, description }) {
   return (
     <AwardStyle>
       <h3>{title}</h3>
@@ -120,6 +138,6 @@ const Award = ({ title, description }) => {
       <p>{description}</p>
     </AwardStyle>
   );
-};
+}
 
-export default MovieDetails;
+export default MovieDetail;

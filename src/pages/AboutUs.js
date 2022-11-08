@@ -1,15 +1,14 @@
-import React from "react";
-// importing Components
-import AboutSection from "../components/AboutSection";
-import ServicesSection from "../components/ServicesSection";
-import FaqSections from "../components/FaqSections";
-// Importing Animations
-import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
-// Importing ScrollTop
-import ScrollTop from "../components/ScrollTop";
+import React from 'react';
 
-function AboutUs() {
+import AboutSection from '../components/AboutSection';
+import ServicesSection from '../components/ServicesSection';
+import FaqSection from '../components/FaqSections';
+// Animation
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
+import ScrollTop from '../components/ScrollTop';
+
+export default function AboutUs() {
   return (
     <motion.div
       exit="exit"
@@ -19,10 +18,8 @@ function AboutUs() {
     >
       <AboutSection />
       <ServicesSection />
-      <FaqSections />
+      <FaqSection />
       <ScrollTop />
     </motion.div>
   );
 }
-
-export default AboutUs;

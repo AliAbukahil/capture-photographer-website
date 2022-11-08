@@ -1,37 +1,53 @@
-import React from "react";
-// Importing Styled Components:
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import { About } from '../styles';
+import Toggle from './Toggle';
+import { AnimateSharedLayout } from 'framer-motion';
 
-import { StyledAbout } from "../styles";
+// Custom Hook
+import { useScroll } from './useScroll';
 
-import Toggle from "./Toggle";
-// Importing Framer Motion
-import { AnimateSharedLayout } from "framer-motion";
-// importing a self created Hook
-import { useScroll } from "./useScroll.js";
-// importing fade Animation
-import { scrollReveal } from "../animation";
+import { scrollReview } from '../animation';
 
-const FaqSections = () => {
+export default function FaqSection() {
   const [element, controls] = useScroll();
+
   return (
-    <StyledFaq
-      variants={scrollReveal}
+    <Faq
+      variants={scrollReview}
+      ref={element}
       animate={controls}
       initial="hidden"
-      ref={element}
     >
       <h2>
-        Any Questions <span>FAQ</span>{" "}
+        Any Question <span>FAQ</span>
       </h2>
+
       <AnimateSharedLayout>
         <Toggle title="How Do I Start?">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              consequatur provident adipisci eum. Quia blanditiis itaque illum
-              ullam! Quos, id.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              reprehenderit perferendis sunt magni dolores ratione.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="What Products do you offer?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              reprehenderit perferendis sunt magni dolores ratione.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Diferrent Payment Methods">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              reprehenderit perferendis sunt magni dolores ratione.
             </p>
           </div>
         </Toggle>
@@ -39,56 +55,40 @@ const FaqSections = () => {
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, ab?
-            </p>
-          </div>
-        </Toggle>
-        <Toggle title="Different Payment Methods">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, ab?
-            </p>
-          </div>
-        </Toggle>
-        <Toggle title="What Products do you offer. ">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, ab?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              reprehenderit perferendis sunt magni dolores ratione.
             </p>
           </div>
         </Toggle>
       </AnimateSharedLayout>
-    </StyledFaq>
+    </Faq>
   );
-};
+}
 
-const StyledFaq = styled(StyledAbout)`
+const Faq = styled(About)`
   display: block;
+
   span {
     display: block;
   }
+
   h2 {
     padding-bottom: 2rem;
     font-weight: lighter;
   }
+
   .faq-line {
     background: #cccccc;
     height: 0.2rem;
     margin: 2rem 0rem;
     width: 100%;
   }
+
   .question {
     padding: 3rem 0rem;
-    cursor: pointer;
-  }
-  .answer {
-    padding: 2rem 0rem;
+
     p {
       padding: 1rem 0rem;
     }
   }
 `;
-
-export default FaqSections;

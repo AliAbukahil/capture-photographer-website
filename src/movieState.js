@@ -6,7 +6,7 @@ import athlete2 from "./img/athlete2.png";
 import goodtimes2 from "./img/good-times2.jpg";
 import theracer2 from "./img/the-racer2.jpg";
 
-export const MovieState = () => {
+export default function MovieState() {
   return [
     {
       title: "The Athlete",
@@ -78,4 +78,4 @@ export const MovieState = () => {
       ],
     },
   ];
-};
+}

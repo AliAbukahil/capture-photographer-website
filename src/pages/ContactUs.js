@@ -1,87 +1,91 @@
-import React from "react";
-// Importing Animations
-import { motion } from "framer-motion";
-import { pageAnimation, titleAnim } from "../animation";
-import styled from "styled-components";
+import React from 'react';
 
-const ContactUs = () => {
+// Animation // Framer motion
+import { motion } from 'framer-motion';
+import { pageAnimation, titleAnim } from '../animation';
+import styled from 'styled-components';
+
+export default function ContactUs() {
   return (
     <ContactStyle
-      style={{ background: "#fff" }}
-      variants={pageAnimation}
       exit="exit"
+      variants={pageAnimation}
       initial="hidden"
       animate="show"
+      style={{ background: '#fff' }}
     >
       <Title>
         <Hide>
           <motion.h2 variants={titleAnim}>Get in touch.</motion.h2>
         </Hide>
-        <div className="line2"></div>
       </Title>
       <div>
         <Hide>
           <Social variants={titleAnim}>
             <Circle />
-            <h2>Socials</h2>
+            <Herf>Send Us A Message</Herf>
           </Social>
         </Hide>
         <Hide>
           <Social variants={titleAnim}>
             <Circle />
-            <h2>Send us a message</h2>
+            <Herf href="www.gmail.com" target="_blank">
+              Send an email
+            </Herf>
           </Social>
         </Hide>
         <Hide>
           <Social variants={titleAnim}>
             <Circle />
-            <h2>Drop an email.</h2>
+            <Herf>Social Media</Herf>
           </Social>
         </Hide>
       </div>
     </ContactStyle>
   );
-};
-
-const Hide = styled.div`
-  overflow: hidden;
-`;
+}
 
 const ContactStyle = styled(motion.div)`
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
   @media (max-width: 1500px) {
-    padding: 2rem;
+    padding: 2rem 2rem;
     font-size: 1rem;
   }
 `;
+
 const Title = styled.div`
   margin-bottom: 4rem;
   color: black;
+  @media (max-width: 1500px) {
+    margin-top: 4rem;
+  }
 `;
+
+const Hide = styled.div`
+  overflow: hidden;
+`;
+
 const Circle = styled.div`
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   background: #353535;
-  @media (max-width: 1500px) {
-    display: none;
-  }
 `;
 
 const Social = styled(motion.div)`
   display: flex;
   align-items: center;
-  h2 {
+  /* h2 {
     margin: 2rem;
-  }
-  @media (max-width: 1500px) {
-    h2 {
-      margin: 1rem 0rem;
-      font-size: 2.5rem;
-    }
-  }
+    font-size: 2.5rem;
+  } */
 `;
 
-export default ContactUs;
+const Herf = styled(motion.a)`
+  margin: 2rem;
+  font-size: 2.5rem;
+  color: #353535;
+  text-decoration: none;
+`;

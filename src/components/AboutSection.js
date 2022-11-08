@@ -1,54 +1,45 @@
-import React from "react";
-// Importing Images
-import home1 from "../img/home1.png";
-
+import React from 'react';
+import home1 from '../img/home1.png';
+import { About, Image, Hide, Description } from '../styles';
 // Framer Motion
-import { motion } from "framer-motion";
-import { titleAnim, fade, photoAnim } from "../animation";
+import { motion } from 'framer-motion';
+import { titleAnim, fade, photoAnim } from '../animation';
+// wave SVG
+import Wave from './Wave';
 
-// import the wave SVG
-import Wave from "./Wave";
+export default function AboutSection() {
+  // Framer Motion
 
-import {
-  StyledAbout,
-  StyledDescription,
-  StyledImage,
-  StyledHide,
-} from "../styles";
-
-function AboutSection() {
   return (
-    <StyledAbout>
-      <StyledDescription>
+    <About>
+      <Description>
         <motion.div>
-          <StyledHide>
-            <motion.h2 variants={titleAnim}>I work to make</motion.h2>
-          </StyledHide>
-          <StyledHide>
+          <Hide>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
+          </Hide>
+          <Hide>
             <motion.h2 variants={titleAnim}>
-              your <span>ideas</span> come to
+              your <span>dreams</span> come
             </motion.h2>
-          </StyledHide>
-          <StyledHide>
-            <motion.h2 variants={titleAnim}>life.</motion.h2>
-          </StyledHide>
+          </Hide>
+          <Hide>
+            <motion.h2 variants={titleAnim}>true.</motion.h2>
+          </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Full Stack Web Developer. Contact me for any photography or
-          videography ideas that you have.
+          Contact us for any photography or videography ideas that you have. We
+          have professional with amazing skills
         </motion.p>
-        <motion.button variants={fade}>Contact Me</motion.button>
-      </StyledDescription>
-      <StyledImage className="image">
+        <motion.button variants={fade}>Contact Us</motion.button>
+      </Description>
+      <Image className="image">
         <motion.img
           variants={photoAnim}
           src={home1}
-          alt="man with a a camera"
+          alt="a guy with a camera"
         />
-      </StyledImage>
+      </Image>
       <Wave />
-    </StyledAbout>
+    </About>
   );
 }
-
-export default AboutSection;

@@ -1,81 +1,81 @@
-import React from "react";
-// Importing Icons
-import clock from "../img/clock.svg";
-import diaphragm from "../img/diaphragm.svg";
-import money from "../img/money.svg";
-import teamwork from "../img/teamwork.svg";
-// Importing Images
-import home2 from "../img/home2.png";
-// importing styles of styled components
-import { StyledAbout, StyledDescription, StyledImage } from "../styles";
-import styled from "styled-components";
-// importing a self created Hook
-import { useScroll } from "./useScroll.js";
-// importing fade Animation
-import { scrollReveal } from "../animation";
+import React from 'react';
 
-function ServicesSection() {
+import clock from '../img/clock.svg';
+import diaphragm from '../img/diaphragm.svg';
+import money from '../img/money.svg';
+import teamwork from '../img/teamwork.svg';
+import home2 from '../img/home2.png';
+// Styles
+import { scrollReview } from '../animation';
+import styled from 'styled-components';
+import { About, Description, Image } from '../styles';
+// Custom Hook
+import { useScroll } from './useScroll';
+
+export default function ServicesSection() {
   const [element, controls] = useScroll();
   return (
-    <StyledServices
-      variants={scrollReveal}
-      animate={controls}
+    <Services
+      variants={scrollReview}
       initial="hidden"
+      animate={controls}
       ref={element}
     >
-      <StyledDescription>
+      <Description>
         <h2>
           High <span>quality</span> services
         </h2>
-        <StyledCards>
-          <StyledCard>
+        <Cards>
+          <Card>
             <div className="icon">
               <img src={clock} alt="clock-icon" />
               <h3>Efficient</h3>
             </div>
             <p>Lorem ipsum dolor sit amet. </p>
-          </StyledCard>
-          <StyledCard>
+          </Card>
+          <Card>
             <div className="icon">
               <img src={teamwork} alt="clock-icon" />
               <h3>Teamwork</h3>
             </div>
             <p>Lorem ipsum dolor sit amet. </p>
-          </StyledCard>
-          <StyledCard>
+          </Card>
+          <Card>
             <div className="icon">
               <img src={diaphragm} alt="clock-icon" />
               <h3>Diaphragm</h3>
             </div>
             <p>Lorem ipsum dolor sit amet. </p>
-          </StyledCard>
-          <div className="card">
-            <div className="icon">
-              <img src={money} alt="clock-icon" />
-              <h3>Affordable</h3>
+          </Card>
+          <Card>
+            <div className="card">
+              <div className="icon">
+                <img src={money} alt="clock-icon" />
+                <h3>Affordable</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet. </p>
             </div>
-            <p>Lorem ipsum dolor sit amet. </p>
-          </div>
-        </StyledCards>
-      </StyledDescription>
-      <StyledImage>
+          </Card>
+        </Cards>
+      </Description>
+      <Image>
         <img src={home2} alt="camera" />
-      </StyledImage>
-    </StyledServices>
+      </Image>
+    </Services>
   );
 }
 
-const StyledServices = styled(StyledAbout)`
+const Services = styled(About)`
   h2 {
     padding-bottom: 5rem;
   }
   p {
     width: 70%;
-    padding-bottom: 2rem 0rem 4rem 0rem;
+    padding: 2rem 0rem 4rem 0rem;
   }
 `;
 
-const StyledCards = styled.div`
+const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   @media (max-width: 1300px) {
@@ -83,7 +83,7 @@ const StyledCards = styled.div`
   }
 `;
 
-const StyledCard = styled.div`
+const Card = styled.div`
   flex-basis: 20rem;
   .icon {
     display: flex;
@@ -96,5 +96,3 @@ const StyledCard = styled.div`
     }
   }
 `;
-
-export default ServicesSection;
